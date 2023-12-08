@@ -1,0 +1,46 @@
+### login to get accessToken
+POST http://localhost:5000/movies/login
+Content-Type: application/json
+
+{
+    "username": "nurulkhairina"
+}
+
+### get all movie
+GET http://localhost:5000/movies
+
+
+### get movie by id
+GET http://localhost:5000/movies/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibnVydWxraGFpcmluYSIsImlhdCI6MTcwMTk3MjAxOSwiZXhwIjoxNzAxOTc1NjE5fQ.xozsie9MqviDN5tSkYWzcqs5dGHe1q0PF0KLZu380TU
+
+
+### create movie with accessToken
+POST http://localhost:5000/movies
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibnVydWxraGFpcmluYSIsImlhdCI6MTcwMTk3MjAxOSwiZXhwIjoxNzAxOTc1NjE5fQ.xozsie9MqviDN5tSkYWzcqs5dGHe1q0PF0KLZu380TU
+
+{
+ "id" : 3,
+ "title" : "Pengabdi Setan ",
+ "description" : "testing",
+ "rating" : 8.0,
+ "image" : ""
+}
+
+### update movie with accessToken
+PATCH http://localhost:5000/movies/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibnVydWxraGFpcmluYSIsImlhdCI6MTcwMTk0NTY5NywiZXhwIjoxNzAxOTQ5Mjk3fQ.UL4hk5CqNGMyO-SfjkKxFqAV98Mxl6hbEUe2blX8m3Y
+
+{
+    "title" : "Pengabdi Setan 2"
+}
+
+### delete movie with accessToken
+DELETE http://localhost:5000/movies/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibnVydWxraGFpcmluYSIsImlhdCI6MTcwMTk3MjAxOSwiZXhwIjoxNzAxOTc1NjE5fQ.xozsie9MqviDN5tSkYWzcqs5dGHe1q0PF0KLZu380TU
+
+### get film
+GET http://localhost:5000/api/movies/popular
+
